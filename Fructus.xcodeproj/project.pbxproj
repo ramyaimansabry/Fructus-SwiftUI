@@ -16,6 +16,7 @@
 		DCCD02FF27076FAB005F5D8E /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD02FE27076FAB005F5D8E /* OnBoardingView.swift */; };
 		DCCD030227077C3A005F5D8E /* FruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD030127077C3A005F5D8E /* FruitModel.swift */; };
 		DCCD030527077D3A005F5D8E /* FruitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD030427077D3A005F5D8E /* FruitData.swift */; };
+		DCD254EE2710B74F002EF05A /* FruitRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD254ED2710B74F002EF05A /* FruitRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DCCD02FE27076FAB005F5D8E /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		DCCD030127077C3A005F5D8E /* FruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitModel.swift; sourceTree = "<group>"; };
 		DCCD030427077D3A005F5D8E /* FruitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitData.swift; sourceTree = "<group>"; };
+		DCD254ED2710B74F002EF05A /* FruitRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				DCCD02FA27076345005F5D8E /* FruitCardView.swift */,
 				DCCD02FC27076906005F5D8E /* StartButtonView.swift */,
+				DCD254ED2710B74F002EF05A /* FruitRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			files = (
 				DCCD030527077D3A005F5D8E /* FruitData.swift in Sources */,
 				DCCD02FB27076345005F5D8E /* FruitCardView.swift in Sources */,
+				DCD254EE2710B74F002EF05A /* FruitRowView.swift in Sources */,
 				DCCD02FD27076906005F5D8E /* StartButtonView.swift in Sources */,
 				DC58B09A26FE34500050E572 /* ContentView.swift in Sources */,
 				DCCD02FF27076FAB005F5D8E /* OnBoardingView.swift in Sources */,
