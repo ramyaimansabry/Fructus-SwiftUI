@@ -11,6 +11,7 @@ struct SettingsView: View {
     // MARK: - Properties
     @Environment(\.presentationMode) var presentationMode
     @AppStorage("isOnboarding") var isOnboarding: Bool = false
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
     
     // MARK: - Body
     var body: some View {
@@ -63,7 +64,26 @@ struct SettingsView: View {
                           Color(UIColor.tertiarySystemBackground)
                             .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
                         )
-                    }// GroupBox
+                        
+                        Divider().padding(.vertical, 4)
+                        
+                        Toggle(isOn: $isDarkMode) {
+                            if isDarkMode {
+                              Text("Dark Mode".uppercased())
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.green)
+                            } else {
+                              Text("Dark Mode".uppercased())
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.secondary)
+                            }
+                        } // Toggle
+                        .padding()
+                        .background(
+                          Color(UIColor.tertiarySystemBackground)
+                            .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                        )
+                    } // GroupBox
                     
                     // Section 3
                     GroupBox(
@@ -91,6 +111,7 @@ struct SettingsView: View {
                 .padding()
             } // ScrollView
         } // NavigationView
+        .preferredColorScheme(isDarkMode ? .dark : .light)
     }
 }
 
