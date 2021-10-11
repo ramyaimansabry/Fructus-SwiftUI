@@ -10,16 +10,29 @@ import SwiftUI
 struct OnBoardingView: View {
     // MARK: - Properties
     private var fruits: [Fruit] = fruitsData
+    @State private var currentIndex: Int = 0
     
     // MARK: - Body
     var body: some View {
-        TabView {
-            ForEach(fruits[0...5]) { item in
-                FruitCardView(fruit: item)
-            }
-        } // TabView
-        .tabViewStyle(PageTabViewStyle())
-        .padding(.vertical, 20)
+        ZStack(alignment: .bottom) {
+            TabView(selection: $currentIndex) {
+                ForEach(0..<4) { i in
+                    FruitCardView(fruit: fruits[i], currentIndex: $currentIndex)
+                        .tag(i)
+                }
+            } // TabView
+            .tabViewStyle(PageTabViewStyle())
+            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .never))
+            .padding(.vertical, 20)
+            
+            HStack(spacing: 55) {
+                PreviousButtonView(currentIndex: $currentIndex)
+                Spacer()
+                NextButtonView(currentIndex: $currentIndex)
+            } // HStack
+            .padding(.bottom, 25)
+            .padding(.horizontal, 35)
+        } // ZStack
     }
 }
 

@@ -11,10 +11,11 @@ struct FruitCardView: View {
     // MARK: - Properties
     var fruit: Fruit
     @State private var isAnimating: Bool = false
+    @Binding var currentIndex: Int
     
     // MARK: - Body
     var body: some View {
-        ZStack {
+        ZStack(alignment: .bottom) {
             VStack(spacing: 20) {
                 Image(fruit.image)
                     .resizable()
@@ -35,6 +36,8 @@ struct FruitCardView: View {
                     .frame(maxWidth: 480)
                 
                 StartButtonView()
+                    .opacity(currentIndex > 2 ? 1 : 0)
+                    .animation(.easeIn(duration: currentIndex > 2 ? 0.2 : 0.0))
             } // VStack
         } // ZStack
         .onAppear {
@@ -53,9 +56,9 @@ struct FruitCardView: View {
 }
 
 // MARK: - Preview
-struct FruitCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        FruitCardView(fruit: fruitsData[1])
-            .previewLayout(.fixed(width: 320, height: 640))
-    }
-}
+//struct FruitCardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FruitCardView(fruit: fruitsData[1], currentIndex: .constant(0))
+//            .previewLayout(.fixed(width: 320, height: 640))
+//    }
+//}

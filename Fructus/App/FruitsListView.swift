@@ -22,7 +22,7 @@ struct FruitsListView: View {
                             .padding(.vertical, 4)
                     }
                 }
-            }
+            } // List
             .navigationTitle("Fruits")
             .toolbar {
                 Button(action: {
