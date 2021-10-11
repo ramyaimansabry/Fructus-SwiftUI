@@ -38,7 +38,7 @@ struct SettingsView: View {
                     
                     // Section 2
                     GroupBox(
-                        label: SettingsLabelView(labelText: "Reset", labelImage: "paintbrush")
+                        label: SettingsLabelView(labelText: "Reset", labelImage: "gear")
                     ) {
                         Divider().padding(.vertical, 4)
                         Text("If you wish, you can restart the application by toggle the switch in this box. That way it starts the onboarding process and you will see the welcome screen again.")
@@ -66,7 +66,7 @@ struct SettingsView: View {
                         )
                     } // GroupBox
                     
-                    // Section 2
+                    // Section 3
                     GroupBox(
                         label: SettingsLabelView(labelText: "Theme", labelImage: "paintbrush")
                     ) {
