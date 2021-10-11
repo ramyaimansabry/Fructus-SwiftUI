@@ -38,7 +38,7 @@ struct SettingsView: View {
                     
                     // Section 2
                     GroupBox(
-                        label: SettingsLabelView(labelText: "Customization", labelImage: "paintbrush")
+                        label: SettingsLabelView(labelText: "Reset", labelImage: "paintbrush")
                     ) {
                         Divider().padding(.vertical, 4)
                         Text("If you wish, you can restart the application by toggle the switch in this box. That way it starts the onboarding process and you will see the welcome screen again.")
@@ -64,8 +64,19 @@ struct SettingsView: View {
                           Color(UIColor.tertiarySystemBackground)
                             .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
                         )
-                        
+                    } // GroupBox
+                    
+                    // Section 2
+                    GroupBox(
+                        label: SettingsLabelView(labelText: "Theme", labelImage: "paintbrush")
+                    ) {
                         Divider().padding(.vertical, 4)
+                        Text("You can select from two themes, dark or light.")
+                            .padding(.vertical, 8)
+                            .frame(minHeight: 30)
+                            .layoutPriority(1)
+                            .font(.footnote)
+                            .multilineTextAlignment(.leading)
                         
                         Toggle(isOn: $isDarkMode) {
                             if isDarkMode {
@@ -85,7 +96,7 @@ struct SettingsView: View {
                         )
                     } // GroupBox
                     
-                    // Section 3
+                    // Section 4
                     GroupBox(
                         label:
                             SettingsLabelView(labelText: "Application", labelImage: "apps.iphone")
