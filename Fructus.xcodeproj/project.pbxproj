@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A78BE9619FA21C00D7D9DE1 /* Pods_Fructus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC38969D9147B72B6FF434E2 /* Pods_Fructus.framework */; };
 		DC58B09826FE34500050E572 /* FructusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58B09726FE34500050E572 /* FructusApp.swift */; };
 		DC58B09A26FE34500050E572 /* FruitsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58B09926FE34500050E572 /* FruitsListView.swift */; };
 		DC58B09C26FE34510050E572 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC58B09B26FE34510050E572 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 		DCB5E6172711DBBA00A0ABCD /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB5E6162711DBBA00A0ABCD /* SettingsRowView.swift */; };
 		DCB5E61927120FCA00A0ABCD /* NextButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB5E61827120FCA00A0ABCD /* NextButtonView.swift */; };
 		DCB5E61B271210D400A0ABCD /* PreviousButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB5E61A271210D400A0ABCD /* PreviousButtonView.swift */; };
+		DCB5E6222714D0CF00A0ABCD /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = DCB5E6212714D0CF00A0ABCD /* .swiftlint.yml */; };
 		DCCD02FB27076345005F5D8E /* FruitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD02FA27076345005F5D8E /* FruitCardView.swift */; };
 		DCCD02FD27076906005F5D8E /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD02FC27076906005F5D8E /* StartButtonView.swift */; };
 		DCCD02FF27076FAB005F5D8E /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD02FE27076FAB005F5D8E /* OnBoardingView.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F6116DC462F0E145CE3A9B2 /* Pods-Fructus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fructus.debug.xcconfig"; path = "Target Support Files/Pods-Fructus/Pods-Fructus.debug.xcconfig"; sourceTree = "<group>"; };
+		CE1FA3587A0FC48199564F2C /* Pods-Fructus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fructus.release.xcconfig"; path = "Target Support Files/Pods-Fructus/Pods-Fructus.release.xcconfig"; sourceTree = "<group>"; };
 		DC58B09426FE34500050E572 /* Fructus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fructus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC58B09726FE34500050E572 /* FructusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FructusApp.swift; sourceTree = "<group>"; };
 		DC58B09926FE34500050E572 /* FruitsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsListView.swift; sourceTree = "<group>"; };
@@ -40,6 +44,7 @@
 		DCB5E6162711DBBA00A0ABCD /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		DCB5E61827120FCA00A0ABCD /* NextButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonView.swift; sourceTree = "<group>"; };
 		DCB5E61A271210D400A0ABCD /* PreviousButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousButtonView.swift; sourceTree = "<group>"; };
+		DCB5E6212714D0CF00A0ABCD /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		DCCD02FA27076345005F5D8E /* FruitCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitCardView.swift; sourceTree = "<group>"; };
 		DCCD02FC27076906005F5D8E /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
 		DCCD02FE27076FAB005F5D8E /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
@@ -50,6 +55,7 @@
 		DCD254F12710CC79002EF05A /* FruitHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitHeaderView.swift; sourceTree = "<group>"; };
 		DCD254F32710CF19002EF05A /* SourceLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLinkView.swift; sourceTree = "<group>"; };
 		DCD254F52710D1D3002EF05A /* FruitNutrientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitNutrientsView.swift; sourceTree = "<group>"; };
+		FC38969D9147B72B6FF434E2 /* Pods_Fructus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fructus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,17 +63,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A78BE9619FA21C00D7D9DE1 /* Pods_Fructus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68AEE008E2C337C0E873E1A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC38969D9147B72B6FF434E2 /* Pods_Fructus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7E682E67319896F27BD606E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F6116DC462F0E145CE3A9B2 /* Pods-Fructus.debug.xcconfig */,
+				CE1FA3587A0FC48199564F2C /* Pods-Fructus.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DC58B08B26FE34500050E572 = {
 			isa = PBXGroup;
 			children = (
+				DCB5E6212714D0CF00A0ABCD /* .swiftlint.yml */,
 				DC58B09626FE34500050E572 /* Fructus */,
 				DC58B09526FE34500050E572 /* Products */,
+				7E682E67319896F27BD606E6 /* Pods */,
+				68AEE008E2C337C0E873E1A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +180,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC58B0A326FE34510050E572 /* Build configuration list for PBXNativeTarget "Fructus" */;
 			buildPhases = (
+				DCB5E6202714D04700A0ABCD /* ShellScript */,
+				11135663664A344D51DA19BE /* [CP] Check Pods Manifest.lock */,
 				DC58B09026FE34500050E572 /* Sources */,
 				DC58B09126FE34500050E572 /* Frameworks */,
 				DC58B09226FE34500050E572 /* Resources */,
@@ -203,12 +232,55 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB5E6222714D0CF00A0ABCD /* .swiftlint.yml in Resources */,
 				DC58B09F26FE34510050E572 /* Preview Assets.xcassets in Resources */,
 				DC58B09C26FE34510050E572 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11135663664A344D51DA19BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fructus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCB5E6202714D04700A0ABCD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DC58B09026FE34500050E572 /* Sources */ = {
@@ -356,6 +428,7 @@
 		};
 		DC58B0A426FE34510050E572 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F6116DC462F0E145CE3A9B2 /* Pods-Fructus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -378,6 +451,7 @@
 		};
 		DC58B0A526FE34510050E572 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE1FA3587A0FC48199564F2C /* Pods-Fructus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

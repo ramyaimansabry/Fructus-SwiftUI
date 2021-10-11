@@ -25,7 +25,7 @@ struct FruitHeaderView: View {
                 .scaleEffect(isAnimatingImage ? 1.0 : 0.6)
         } // ZStack
         .frame(height: 440)
-        .onAppear() {
+        .onAppear {
             withAnimation(.easeOut(duration: 0.5)) {
                 isAnimatingImage = true
             }

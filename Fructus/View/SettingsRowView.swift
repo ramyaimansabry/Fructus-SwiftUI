@@ -10,9 +10,9 @@ import SwiftUI
 struct SettingsRowView: View {
     // MARK: - Properties
     var name: String
-    var content: String? = nil
-    var linkLabel: String? = nil
-    var linkDestination: String? = nil
+    var content: String?
+    var linkLabel: String?
+    var linkDestination: String?
     
     // MARK: - Body
     var body: some View {
@@ -22,13 +22,12 @@ struct SettingsRowView: View {
                 Text(name)
                     .foregroundColor(Color.gray)
                 Spacer()
-                if (content != nil) {
+                if content != nil {
                   Text(content!)
-                } else if (linkLabel != nil && linkDestination != nil) {
+                } else if linkLabel != nil && linkDestination != nil {
                   Link(linkLabel!, destination: URL(string: "https://\(linkDestination!)")!)
                   Image(systemName: "arrow.up.right.square").foregroundColor(.pink)
-                }
-                else {
+                } else {
                   EmptyView()
                 }
             }

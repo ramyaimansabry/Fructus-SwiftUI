@@ -25,9 +25,9 @@ struct FruitsListView: View {
             } // List
             .navigationTitle("Fruits")
             .toolbar {
-                Button(action: {
+                Button {
                     isShowingSettingsView = true
-                }) {
+                } label: {
                     Image(systemName: "slider.horizontal.3")
                 } // Button
                 .sheet(isPresented: $isShowingSettingsView) {

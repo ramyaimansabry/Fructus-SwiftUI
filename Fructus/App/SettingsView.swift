@@ -113,9 +113,9 @@ struct SettingsView: View {
                 .navigationTitle(Text("Settings"))
                 .navigationBarTitleDisplayMode(.large)
                 .toolbar {
-                    Button(action: {
+                    Button {
                         presentationMode.wrappedValue.dismiss()
-                    }) {
+                    } label: {
                         Image(systemName: "xmark")
                     }
                 }

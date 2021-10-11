@@ -12,7 +12,7 @@ struct SourceLinkView: View {
     
     // MARK: - Body
     var body: some View {
-        GroupBox() {
+        GroupBox {
             HStack {
                 Text("Content source")
                 Spacer()

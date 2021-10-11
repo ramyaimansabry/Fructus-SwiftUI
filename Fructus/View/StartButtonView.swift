@@ -13,9 +13,9 @@ struct StartButtonView: View {
     
     // MARK: - Body
     var body: some View {
-        Button(action: {
+        Button {
             isOnboarding = false
-        }) {
+        } label: {
             HStack(spacing: 8) {
                 Text("Start")
                 
@@ -27,8 +27,7 @@ struct StartButtonView: View {
             .background(
                 Capsule().strokeBorder(Color.white, lineWidth: 1.25)
             )
-        }
-        .accentColor(Color.white)
+        }.accentColor(Color.white)
     }
 }
 

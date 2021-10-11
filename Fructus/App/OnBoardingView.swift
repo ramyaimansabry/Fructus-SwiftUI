@@ -16,9 +16,9 @@ struct OnBoardingView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $currentIndex) {
-                ForEach(0..<4) { i in
-                    FruitCardView(fruit: fruits[i], currentIndex: $currentIndex)
-                        .tag(i)
+                ForEach(0..<4) { itemIndex in
+                    FruitCardView(fruit: fruits[itemIndex], currentIndex: $currentIndex)
+                        .tag(itemIndex)
                 }
             } // TabView
             .tabViewStyle(PageTabViewStyle())

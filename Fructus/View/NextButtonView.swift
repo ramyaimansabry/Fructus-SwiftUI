@@ -13,9 +13,9 @@ struct NextButtonView: View {
     
     // MARK: - Body
     var body: some View {
-        Button(action: {
+        Button {
             currentIndex < 3 ? (currentIndex += 1) : ()
-        }) {
+        } label: {
             HStack(spacing: 8) {
                 Image(systemName: "arrow.right")
                     .imageScale(.large)
