@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct SettingsView: View {
-    // MARK: - Properties
+    
     @Environment(\.presentationMode) var presentationMode
     @AppStorage("isOnboarding") var isOnboarding: Bool = false
     @AppStorage("isDarkMode") private var isDarkMode: Bool = false
     
-    // MARK: - Body
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
@@ -126,7 +125,7 @@ struct SettingsView: View {
     }
 }
 
-// MARK: - Preview
+#if DEBUG
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
@@ -134,3 +133,4 @@ struct SettingsView_Previews: PreviewProvider {
             .previewDevice("iPhone 12 Pro")
     }
 }
+#endif

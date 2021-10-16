@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct FruitsListView: View {
-    // MARK: - Properties
-    var fruits: [Fruit] = fruitsData
-    @State private var isShowingSettingsView: Bool = false
+
+    @ObservedObject private var viewModel = FruitsViewModel()
     
-    // MARK: - Body
     var body: some View {
         NavigationView {
             List {
-                ForEach(fruits.shuffled()) { item in
+                ForEach(viewModel.fruitsItems) { item in
                     NavigationLink(destination: FruitDetailsView(fruit: item)) {
                         FruitRowView(fruit: item)
                             .padding(.vertical, 4)
@@ -26,22 +24,26 @@ struct FruitsListView: View {
             .navigationTitle("Fruits")
             .toolbar {
                 Button {
-                    isShowingSettingsView = true
+                    viewModel.isShowingSettingsView = true
                 } label: {
                     Image(systemName: "slider.horizontal.3")
                 } // Button
-                .sheet(isPresented: $isShowingSettingsView) {
+                .sheet(isPresented: $viewModel.isShowingSettingsView) {
                     SettingsView()
                 }
             }
         } // Navigation
         .navigationViewStyle(StackNavigationViewStyle())
+        .onAppear {
+            viewModel.onAppear()
+        }
     }
 }
 
-// MARK: - Preview
+#if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        FruitsListView(fruits: fruitsData)
+        FruitsListView()
     }
 }
+#endif

@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct FruitDetailsView: View {
-    // MARK: - Properties
+    
     var fruit: Fruit
     
-    // MARK: - Body
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
@@ -61,9 +60,10 @@ struct FruitDetailsView: View {
     }
 }
 
-// MARK: - Preview
+#if DEBUG
 struct FruitDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         FruitDetailsView(fruit: fruitsData[0])
     }
 }
+#endif

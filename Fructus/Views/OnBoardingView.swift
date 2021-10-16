@@ -8,16 +8,14 @@
 import SwiftUI
 
 struct OnBoardingView: View {
-    // MARK: - Properties
-    private var fruits: [Fruit] = fruitsData
-    @State private var currentIndex: Int = 0
-    
-    // MARK: - Body
+
+    @StateObject private var viewModel = FruitsViewModel()
+        
     var body: some View {
         ZStack(alignment: .bottom) {
-            TabView(selection: $currentIndex) {
-                ForEach(0..<4) { itemIndex in
-                    FruitCardView(fruit: fruits[itemIndex], currentIndex: $currentIndex)
+            TabView(selection: $viewModel.currentIndex) {
+                ForEach(0..<min(viewModel.fruitsItems.count, 4)) { itemIndex in
+                    FruitCardView(fruit: viewModel.fruitsItems[itemIndex], currentIndex: $viewModel.currentIndex)
                         .tag(itemIndex)
                 }
             } // TabView
@@ -26,19 +24,23 @@ struct OnBoardingView: View {
             .padding(.vertical, 20)
             
             HStack(spacing: 55) {
-                PreviousButtonView(currentIndex: $currentIndex)
+                PreviousButtonView(currentIndex: $viewModel.currentIndex)
                 Spacer()
-                NextButtonView(currentIndex: $currentIndex)
+                NextButtonView(currentIndex: $viewModel.currentIndex)
             } // HStack
             .padding(.bottom, 25)
             .padding(.horizontal, 35)
+            .onAppear {
+                viewModel.onAppear()
+            }
         } // ZStack
     }
 }
 
-// MARK: - Preview
+#if DEBUG
 struct OnBoardingView_Previews: PreviewProvider {
     static var previews: some View {
         OnBoardingView()
     }
 }
+#endif
