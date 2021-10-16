@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct FruitCardView: View {
-    // MARK: - Properties
+    
     var fruit: Fruit
     @State private var isAnimating: Bool = false
     @Binding var currentIndex: Int
     
-    // MARK: - Body
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack(spacing: 20) {
@@ -35,9 +34,18 @@ struct FruitCardView: View {
                     .padding(.horizontal, 16)
                     .frame(maxWidth: 480)
                 
-                StartButtonView()
-                    .opacity(currentIndex > 2 ? 1 : 0)
-                    .animation(.easeIn(duration: currentIndex > 2 ? 0.2 : 0.0))
+                Button {
+                    
+                } label: {
+                    HStack {
+                        Text("Start")
+                        Image(systemName: "arrow.right.circle")
+                            .imageScale(.large)
+                    }
+                } // Start Button
+                .buttonStyle(RoundedCornerButtonStyle())
+                .opacity(currentIndex > 2 ? 1 : 0)
+                .animation(.easeIn(duration: currentIndex > 2 ? 0.2 : 0.0))
             } // VStack
         } // ZStack
         .onAppear {

@@ -24,9 +24,23 @@ struct OnBoardingView: View {
             .padding(.vertical, 20)
             
             HStack(spacing: 55) {
-                PreviousButtonView(currentIndex: $viewModel.currentIndex)
+                Button {
+                    viewModel.onPreviousBoardButtonPress()
+                } label: {
+                    Image(systemName: "arrow.left")
+                        .imageScale(.large)
+                } // Previous Button
+                .buttonStyle(NextPreviousButtonStyle())
+                
                 Spacer()
-                NextButtonView(currentIndex: $viewModel.currentIndex)
+                
+                Button {
+                    viewModel.onNextBoardButtonPress()
+                } label: {
+                    Image(systemName: "arrow.right")
+                        .imageScale(.large)
+                } // Next Button
+                .buttonStyle(NextPreviousButtonStyle())
             } // HStack
             .padding(.bottom, 25)
             .padding(.horizontal, 35)

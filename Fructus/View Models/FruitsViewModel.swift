@@ -24,4 +24,12 @@ final class FruitsViewModel: ObservableObject {
             self.fruitsItems = fruits
         }
     }
+    
+    func onNextBoardButtonPress() {
+        currentIndex < fruitsItems.count ? (currentIndex += 1) : ()
+    }
+    
+    func onPreviousBoardButtonPress() {
+        currentIndex > 0 ? (currentIndex -= 1) : ()
+    }
 }
