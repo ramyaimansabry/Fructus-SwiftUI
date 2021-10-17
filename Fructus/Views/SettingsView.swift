@@ -10,8 +10,7 @@ import SwiftUI
 struct SettingsView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    @AppStorage("isOnboarding") var isOnboarding: Bool = false
-    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
+    @StateObject private var viewModel = SettingsViewModel()
     
     var body: some View {
         NavigationView {
@@ -47,8 +46,8 @@ struct SettingsView: View {
                             .font(.footnote)
                             .multilineTextAlignment(.leading)
                         
-                        Toggle(isOn: $isOnboarding) {
-                            if isOnboarding {
+                        Toggle(isOn: $viewModel.isOnboarding) {
+                            if viewModel.isOnboarding {
                               Text("Restarted".uppercased())
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.green)
@@ -77,8 +76,8 @@ struct SettingsView: View {
                             .font(.footnote)
                             .multilineTextAlignment(.leading)
                         
-                        Toggle(isOn: $isDarkMode) {
-                            if isDarkMode {
+                        Toggle(isOn: $viewModel.isDarkMode) {
+                            if viewModel.isDarkMode {
                               Text("Dark Mode".uppercased())
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.green)
@@ -121,7 +120,7 @@ struct SettingsView: View {
                 .padding()
             } // ScrollView
         } // NavigationView
-        .preferredColorScheme(isDarkMode ? .dark : .light)
+        .preferredColorScheme(viewModel.isDarkMode ? .dark : .light)
     }
 }
 

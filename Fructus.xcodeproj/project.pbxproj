@@ -14,6 +14,8 @@
 		DC490FE1271B216600B71C68 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC490FE0271B216600B71C68 /* SettingsViewModel.swift */; };
 		DC490FE4271B27DA00B71C68 /* NextPreviousButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC490FE3271B27DA00B71C68 /* NextPreviousButtonStyle.swift */; };
 		DC490FE6271B2D3200B71C68 /* RoundedCornerButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC490FE5271B2D3200B71C68 /* RoundedCornerButtonStyle.swift */; };
+		DC490FE8271B340B00B71C68 /* SettingsStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC490FE7271B340B00B71C68 /* SettingsStorageService.swift */; };
+		DC490FEA271B346F00B71C68 /* SettingsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC490FE9271B346F00B71C68 /* SettingsRepository.swift */; };
 		DC58B09826FE34500050E572 /* FructusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58B09726FE34500050E572 /* FructusApp.swift */; };
 		DC58B09A26FE34500050E572 /* FruitsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58B09926FE34500050E572 /* FruitsListView.swift */; };
 		DC58B09C26FE34510050E572 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC58B09B26FE34510050E572 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 		DC490FE0271B216600B71C68 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		DC490FE3271B27DA00B71C68 /* NextPreviousButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPreviousButtonStyle.swift; sourceTree = "<group>"; };
 		DC490FE5271B2D3200B71C68 /* RoundedCornerButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerButtonStyle.swift; sourceTree = "<group>"; };
+		DC490FE7271B340B00B71C68 /* SettingsStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStorageService.swift; sourceTree = "<group>"; };
+		DC490FE9271B346F00B71C68 /* SettingsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRepository.swift; sourceTree = "<group>"; };
 		DC58B09426FE34500050E572 /* Fructus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fructus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC58B09726FE34500050E572 /* FructusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FructusApp.swift; sourceTree = "<group>"; };
 		DC58B09926FE34500050E572 /* FruitsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsListView.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				DC490FDC271AF64A00B71C68 /* FruitsApiService.swift */,
+				DC490FE7271B340B00B71C68 /* SettingsStorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				DC490FDA271AF4E300B71C68 /* FruitsRepository.swift */,
+				DC490FE9271B346F00B71C68 /* SettingsRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -343,8 +349,10 @@
 				DCD254F22710CC79002EF05A /* FruitHeaderView.swift in Sources */,
 				DCCD02FF27076FAB005F5D8E /* OnBoardingView.swift in Sources */,
 				DCB5E6152711D83300A0ABCD /* SettingsLabelView.swift in Sources */,
+				DC490FE8271B340B00B71C68 /* SettingsStorageService.swift in Sources */,
 				DCCD030227077C3A005F5D8E /* FruitModel.swift in Sources */,
 				DC58B09826FE34500050E572 /* FructusApp.swift in Sources */,
+				DC490FEA271B346F00B71C68 /* SettingsRepository.swift in Sources */,
 				DCB5E6132711CBF900A0ABCD /* SettingsView.swift in Sources */,
 				DC490FE1271B216600B71C68 /* SettingsViewModel.swift in Sources */,
 				DC490FE4271B27DA00B71C68 /* NextPreviousButtonStyle.swift in Sources */,
