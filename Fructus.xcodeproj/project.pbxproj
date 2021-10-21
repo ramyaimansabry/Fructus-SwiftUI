@@ -24,6 +24,7 @@
 		DC74DBF527204799003E839F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74DBF427204799003E839F /* Constants.swift */; };
 		DC74DBF72720492B003E839F /* Binding+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74DBF62720492B003E839F /* Binding+Extension.swift */; };
 		DC9D6DF82721703F00C58D22 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D6DF72721703F00C58D22 /* OnBoardingViewModel.swift */; };
+		DC9D6DFB2721D6A000C58D22 /* StartScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D6DFA2721D6A000C58D22 /* StartScreenManager.swift */; };
 		DCB5E6132711CBF900A0ABCD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB5E6122711CBF900A0ABCD /* SettingsView.swift */; };
 		DCB5E6152711D83300A0ABCD /* SettingsLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB5E6142711D83300A0ABCD /* SettingsLabelView.swift */; };
 		DCB5E6172711DBBA00A0ABCD /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB5E6162711DBBA00A0ABCD /* SettingsRowView.swift */; };
@@ -60,6 +61,7 @@
 		DC74DBF427204799003E839F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DC74DBF62720492B003E839F /* Binding+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extension.swift"; sourceTree = "<group>"; };
 		DC9D6DF72721703F00C58D22 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
+		DC9D6DFA2721D6A000C58D22 /* StartScreenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenManager.swift; sourceTree = "<group>"; };
 		DCB5E6122711CBF900A0ABCD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		DCB5E6142711D83300A0ABCD /* SettingsLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLabelView.swift; sourceTree = "<group>"; };
 		DCB5E6162711DBBA00A0ABCD /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 		DC74DBEE27204430003E839F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DC9D6DF92721D68B00C58D22 /* Managers */,
 				DC74DBF0272045F3003E839F /* Core Helpers */,
 				DC74DBF32720476A003E839F /* Constants */,
 			);
@@ -214,6 +217,14 @@
 				DC74DBF427204799003E839F /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		DC9D6DF92721D68B00C58D22 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DC9D6DFA2721D6A000C58D22 /* StartScreenManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		DCCD02F8270762E3005F5D8E /* Applications */ = {
@@ -376,6 +387,7 @@
 				DC74DBF72720492B003E839F /* Binding+Extension.swift in Sources */,
 				DC490FDB271AF4E300B71C68 /* FruitsRepository.swift in Sources */,
 				DC74DBF227204602003E839F /* UserDefault.swift in Sources */,
+				DC9D6DFB2721D6A000C58D22 /* StartScreenManager.swift in Sources */,
 				DCD254F42710CF19002EF05A /* SourceLinkView.swift in Sources */,
 				DC490FE6271B2D3200B71C68 /* RoundedCornerButtonStyle.swift in Sources */,
 				DCB5E6172711DBBA00A0ABCD /* SettingsRowView.swift in Sources */,
