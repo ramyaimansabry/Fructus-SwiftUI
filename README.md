@@ -9,7 +9,7 @@ A simple SwiftUI app displays some fruits information
 
 [[Watch the video]](https://youtu.be/vTqfBY1wZmI)
 
-[![Watch the video](http://i3.ytimg.com/vi/vTqfBY1wZmI/hqdefault.jpg)](https://youtu.be/vTqfBY1wZmI)
+[![Watch the video](http://i3.ytimg.com/vi/vTqfBY1wZmI/maxresdefault.jpg)](https://youtu.be/vTqfBY1wZmI)
 
 ## Installation
 
