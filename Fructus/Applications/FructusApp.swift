@@ -9,12 +9,11 @@ import SwiftUI
 
 @main
 struct FructusApp: App {
-    @AppStorage("isOnboarding") var isOnboarding: Bool = true
-    @AppStorage("isDarkMode") var isDarkMode: Bool = false
+    @AppStorage(Constants.isDarkMode) var isDarkMode: Bool = false
     
     var body: some Scene {
         WindowGroup {
-            if isOnboarding {
+            if let isOnboarding: Bool = UserDefault.shared.boolean(forKey: Constants.isOnboarding), isOnboarding == true {
                 OnBoardingView()
                     .preferredColorScheme(isDarkMode ? .dark : .light)
             } else {

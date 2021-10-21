@@ -13,6 +13,6 @@ struct NextPreviousButtonStyle: ButtonStyle {
         configuration.label
             .padding(.horizontal, 16)
             .padding(.vertical, 10)
-            .accentColor(Color.white)
+            .foregroundColor(Color.white)
     }
 }

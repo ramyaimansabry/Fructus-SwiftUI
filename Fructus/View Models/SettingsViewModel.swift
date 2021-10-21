@@ -11,10 +11,20 @@ import SwiftUI
 final class SettingsViewModel: ObservableObject {
     private let repository: SettingsRepositoryProtocol
     
-    init(repository: SettingsRepositoryProtocol = SettingsRepository()) {
-        self.repository = repository
+    @Published var isOnboarding: Bool = false {
+        didSet {
+            repository.changeIsOnboardingValue(to: isOnboarding)
+        }
     }
     
-    @AppStorage("isOnboarding") var isOnboarding: Bool = false
-    @AppStorage("isDarkMode") var isDarkMode: Bool = false
+    @Published var isDarkMode: Bool {
+        didSet {
+            repository.changeIfAppInDarkMode(to: isDarkMode)
+        }
+    }
+    
+    init(repository: SettingsRepositoryProtocol = SettingsRepository()) {
+        self.repository = repository
+        self.isDarkMode = repository.isDarkMode
+    }
 }

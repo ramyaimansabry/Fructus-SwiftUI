@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct SourceLinkView: View {
-    // MARK: - Properties
-    
-    // MARK: - Body
+
     var body: some View {
         GroupBox {
             HStack {
@@ -24,7 +22,7 @@ struct SourceLinkView: View {
     }
 }
 
-// MARK: - Preview
+#if DEBUG
 struct SourceLinkView_Previews: PreviewProvider {
     static var previews: some View {
         SourceLinkView()
@@ -32,3 +30,4 @@ struct SourceLinkView_Previews: PreviewProvider {
             .padding()
     }
 }
+#endif

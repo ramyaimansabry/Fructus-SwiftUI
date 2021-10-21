@@ -21,6 +21,7 @@ struct FruitsListView: View {
                     }
                 }
             } // List
+            .listStyle(.plain)
             .navigationTitle("Fruits")
             .toolbar {
                 Button {

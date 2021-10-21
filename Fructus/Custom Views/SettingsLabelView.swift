@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct SettingsLabelView: View {
-    // MARK: - Properties
+    
     let labelText: String
     let labelImage: String
     
-    // MARK: - Body
     var body: some View {
         HStack {
             Text(labelText.uppercased()).fontWeight(.bold)
@@ -22,7 +21,7 @@ struct SettingsLabelView: View {
     }
 }
 
-// MARK: - Preview
+#if DEBUG
 struct SettingsLabelView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsLabelView(labelText: "Fructus", labelImage: "info.circle")
@@ -30,3 +29,4 @@ struct SettingsLabelView_Previews: PreviewProvider {
             .padding()
     }
 }
+#endif

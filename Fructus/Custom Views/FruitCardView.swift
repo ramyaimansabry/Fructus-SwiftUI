@@ -11,7 +11,6 @@ struct FruitCardView: View {
     
     var fruit: Fruit
     @State private var isAnimating: Bool = false
-    @Binding var currentIndex: Int
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -33,19 +32,6 @@ struct FruitCardView: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 16)
                     .frame(maxWidth: 480)
-                
-                Button {
-                    
-                } label: {
-                    HStack {
-                        Text("Start")
-                        Image(systemName: "arrow.right.circle")
-                            .imageScale(.large)
-                    }
-                } // Start Button
-                .buttonStyle(RoundedCornerButtonStyle())
-                .opacity(currentIndex > 2 ? 1 : 0)
-                .animation(.easeIn(duration: currentIndex > 2 ? 0.2 : 0.0))
             } // VStack
         } // ZStack
         .onAppear {
@@ -63,10 +49,11 @@ struct FruitCardView: View {
     } // Body
 }
 
-// MARK: - Preview
-// struct FruitCardView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FruitCardView(fruit: fruitsData[1], currentIndex: .constant(0))
-//            .previewLayout(.fixed(width: 320, height: 640))
-//    }
-// }
+#if DEBUG
+ struct FruitCardView_Previews: PreviewProvider {
+    static var previews: some View {
+        FruitCardView(fruit: fruitsData[1])
+            .previewLayout(.fixed(width: 320, height: 640))
+    }
+ }
+#endif

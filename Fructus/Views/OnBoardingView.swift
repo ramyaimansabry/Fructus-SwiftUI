@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct OnBoardingView: View {
-
-    @StateObject private var viewModel = FruitsViewModel()
-        
+    
+    @StateObject private var viewModel = OnBoardingViewModel()
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $viewModel.currentIndex) {
-                ForEach(0..<min(viewModel.fruitsItems.count, 4)) { itemIndex in
-                    FruitCardView(fruit: viewModel.fruitsItems[itemIndex], currentIndex: $viewModel.currentIndex)
+                ForEach(0..<4) { itemIndex in
+                    FruitCardView(fruit: viewModel.fruitsItems[itemIndex])
                         .tag(itemIndex)
                 }
             } // TabView
@@ -34,13 +34,27 @@ struct OnBoardingView: View {
                 
                 Spacer()
                 
-                Button {
-                    viewModel.onNextBoardButtonPress()
-                } label: {
-                    Image(systemName: "arrow.right")
-                        .imageScale(.large)
-                } // Next Button
-                .buttonStyle(NextPreviousButtonStyle())
+                if viewModel.isOnLastBoard {
+                    Button {
+                        viewModel.onEndOnboarding()
+                        
+                    } label: {
+                        Text("Start")
+                    } // Start Button
+                    .fullScreenCover(isPresented: $viewModel.presentFruitsListView, content: {
+                        FruitsListView()
+                    })
+                    .buttonStyle(NextPreviousButtonStyle())
+                    .animation(.easeIn(duration: 0.4))
+                } else {
+                    Button {
+                        viewModel.onNextBoardButtonPress()
+                    } label: {
+                        Image(systemName: "arrow.right")
+                            .imageScale(.large)
+                    } // Next Button
+                    .buttonStyle(NextPreviousButtonStyle())
+                }
             } // HStack
             .padding(.bottom, 25)
             .padding(.horizontal, 35)
