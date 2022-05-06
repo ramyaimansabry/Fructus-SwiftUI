@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct SettingsView: View {
-    // MARK: - Properties
-    @Environment(\.presentationMode) var presentationMode
-    @AppStorage("isOnboarding") var isOnboarding: Bool = false
-    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
     
-    // MARK: - Body
+    @Environment(\.presentationMode) var presentationMode
+    @StateObject private var viewModel = SettingsViewModel()
+    
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
@@ -48,8 +46,8 @@ struct SettingsView: View {
                             .font(.footnote)
                             .multilineTextAlignment(.leading)
                         
-                        Toggle(isOn: $isOnboarding) {
-                            if isOnboarding {
+                        Toggle(isOn: $viewModel.isOnboarding) {
+                            if viewModel.isOnboarding {
                               Text("Restarted".uppercased())
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.green)
@@ -78,8 +76,8 @@ struct SettingsView: View {
                             .font(.footnote)
                             .multilineTextAlignment(.leading)
                         
-                        Toggle(isOn: $isDarkMode) {
-                            if isDarkMode {
+                        Toggle(isOn: $viewModel.isDarkMode) {
+                            if viewModel.isDarkMode {
                               Text("Dark Mode".uppercased())
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.green)
@@ -122,11 +120,11 @@ struct SettingsView: View {
                 .padding()
             } // ScrollView
         } // NavigationView
-        .preferredColorScheme(isDarkMode ? .dark : .light)
+        .preferredColorScheme(viewModel.isDarkMode ? .dark : .light)
     }
 }
 
-// MARK: - Preview
+#if DEBUG
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
@@ -134,3 +132,4 @@ struct SettingsView_Previews: PreviewProvider {
             .previewDevice("iPhone 12 Pro")
     }
 }
+#endif

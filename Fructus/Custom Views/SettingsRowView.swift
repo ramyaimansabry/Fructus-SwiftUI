@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct SettingsRowView: View {
-    // MARK: - Properties
+    
     var name: String
     var content: String?
     var linkLabel: String?
     var linkDestination: String?
     
-    // MARK: - Body
     var body: some View {
         VStack {
             Divider().padding(.vertical, 4)
@@ -35,17 +34,22 @@ struct SettingsRowView: View {
     }
 }
 
-// MARK: - Preview
+#if DEBUG
 struct SettingsRowView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
           SettingsRowView(name: "Developer", content: "Ramy Sabry")
             .previewLayout(.fixed(width: 375, height: 60))
             .padding()
-          SettingsRowView(name: "Website", linkLabel: "LinkedIn Account", linkDestination: "https://www.linkedin.com/in/ramy-aiman-sabry-153770117/")
+          SettingsRowView(
+            name: "Website",
+            linkLabel: "LinkedIn Account",
+            linkDestination: "https://www.linkedin.com/in/ramy-aiman-sabry-153770117/"
+          )
             .preferredColorScheme(.dark)
             .previewLayout(.fixed(width: 375, height: 60))
             .padding()
         }
     }
 }
+#endif
